@@ -1,0 +1,4 @@
+Include the .gin files in Atari_experiments/dopamine/agents/...
+Add all files for plotting.
+Nettoyer tous les fichiers de code pour retirer les noms d'auteurs.
+Tout anonymiser.

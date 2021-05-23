@@ -1,8 +1,4 @@
-################################################################################################################
-# Authors:                                                                                                     #
-# Kenny Young (kjyoung@ualberta.ca)                                                                            #
-# Tian Tian(ttian@ualberta.ca)                                                                                 #
-#                                                                                                              #
+################################################################################################################                                                                                                  #
 # python3 dqn.py -g <game>                                                                                     #
 #   -o, --output <directory/file name prefix>                                                                  #
 #   -v, --verbose: outputs the average returns every 1000 episodes                                             #

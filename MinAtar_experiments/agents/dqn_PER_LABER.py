@@ -1,8 +1,4 @@
-################################################################################################################
-# Authors:                                                                                                     #
-# Kenny Young (kjyoung@ualberta.ca)                                                                            #
-# Tian Tian(ttian@ualberta.ca)                                                                                 #
-#                                                                                                              #
+################################################################################################################                                                                              #
 # python3 dqn.py -g <game>                                                                                     #
 #   -o, --output <directory/file name prefix>                                                                  #
 #   -v, --verbose: outputs the average returns every 1000 episodes                                             #
@@ -101,7 +97,7 @@ class QNetwork(nn.Module):
 ###########################################################################################################
 # class replay_buffer
 #
-# A cyclic buffer of a fixed size containing the last N number of recent transitions.  A transition is a
+# A cyclic prioritized buffer of a fixed size containing the last N number of recent transitions.  A transition is a
 # tuple of state, next_state, action, reward, is_terminal.  The boolean is_terminal is used to indicate
 # whether if the next state is a terminal state or not.
 #
@@ -134,7 +130,7 @@ class replay_buffer:
             prios = self.priorities[:self.location]
 
         # calc P = p^a/sum(p^a)
-        probs  = prios ** 0.5
+        probs  = prios ** 0.6
         P = probs/probs.sum()
 
         #gets the indices depending on the probability p

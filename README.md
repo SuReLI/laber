@@ -30,13 +30,14 @@ Atari experiments follow the model of the Dopamine original code and are specifi
 
 ```
 cd Atari_experiments
-python3 -um dopamine.discrete_domains.train \
-  --base_dir=results/dqn_laber_pong/ 
-  --gin_files=dopamine/agents/dqn_LABER/configs/dqn_LABER_pong.gin
+python3 -um dopamine.discrete_domains.train --base_dir=results/dqn_laber_pong/ --gin_files=dopamine/agents/dqn_LABER/configs/dqn_LABER_pong.gin
 ```
 
-Once the experiments are run, one can recreate the paper's graphs using:
-TODO
+Once the experiments are run, the results are stored in the folder results/. One can recreate the paper's graphs using:
+```
+cd Atari_experiments
+python3 plot_return.py -w (directory of the tensorboard file) (directory to store the numpy array of results)
+```
 
 ## MinAtar
 

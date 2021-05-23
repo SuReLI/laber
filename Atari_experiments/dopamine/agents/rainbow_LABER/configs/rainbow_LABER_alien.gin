@@ -1,0 +1,38 @@
+# Hyperparameters follow Hessel et al. (2018), except for sticky_actions,
+# which was False (not using sticky actions) in the original paper.
+import dopamine.agents.rainbow_LABER.rainbow_LABER_agent
+import dopamine.discrete_domains.atari_lib
+import dopamine.discrete_domains.run_experiment
+import dopamine.replay_memory.prioritized_replay_buffer
+import gin.tf.external_configurables
+
+rainbow_LABER_Agent.num_atoms = 51
+rainbow_LABER_Agent.vmax = 10.
+rainbow_LABER_Agent.gamma = 0.99
+rainbow_LABER_Agent.update_horizon = 3
+rainbow_LABER_Agent.min_replay_history = 20000  # agent steps
+rainbow_LABER_Agent.update_period = 4
+rainbow_LABER_Agent.target_update_period = 8000  # agent steps
+rainbow_LABER_Agent.epsilon_train = 0.01
+rainbow_LABER_Agent.epsilon_eval = 0.001
+rainbow_LABER_Agent.epsilon_decay_period = 250000  # agent steps
+rainbow_LABER_Agent.replay_scheme = 'prioritized'
+rainbow_LABER_Agent.tf_device = '/gpu:0'  # use '/cpu:*' for non-GPU version
+rainbow_LABER_Agent.optimizer = @tf.train.AdamOptimizer()
+
+# Note these parameters are different from C51's.
+tf.train.AdamOptimizer.learning_rate = 0.0000625
+tf.train.AdamOptimizer.epsilon = 0.00015
+
+atari_lib.create_atari_environment.game_name = 'Alien'
+# Sticky actions with probability 0.25, as suggested by (Machado et al., 2017).
+atari_lib.create_atari_environment.sticky_actions = True
+create_agent.agent_name = 'rainbow_laber'
+create_runner.schedule = 'continuous_train'
+Runner.num_iterations = 120
+Runner.training_steps = 250000  # agent steps
+#Runner.evaluation_steps = 125000  # agent steps
+Runner.max_steps_per_episode = 27000  # agent steps
+
+WrappedPrioritizedReplayBuffer.replay_capacity = 1000000
+WrappedPrioritizedReplayBuffer.batch_size = 128

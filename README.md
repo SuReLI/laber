@@ -44,13 +44,37 @@ MinAtar experiments follow the model of the MinAtar original code. For example, 
 
 ```
 cd MinAtar_experiments
-python3 agents/dqn.py -g breakout -v -a 0.0001
+python3 agents/dqn_LABER.py -g breakout -o resultsbreakout/dqn_LABER -v -a 0.0001
 ```
 
 For details on the arguments passed to the RL agents, see each agent's documentation (e.g. [dqn_LABER.py](agents/dqn_LABER.py)).
 
 Once the experiments are run, one can recreate the paper's graphs using:
-TODO
+For Asterix: 
+```
+cd MinAtar_experiments
+python3 agents/plot_return.py -f resultsasterix/dqn_LABER -w 50 -s 12000 -n (number of runs) 
+```
+For Breakout: 
+```
+cd MinAtar_experiments
+python3 agents/plot_return.py -f resultsbreakout/dqn_LABER -w 100 -s 30000 -n (number of runs) 
+```
+For Freeway: 
+```
+cd MinAtar_experiments
+python3 agents/plot_return.py -f resultsfreeway/dqn_LABER -w 25 -s 300 -n (number of runs) 
+```
+For Seaquest: 
+```
+cd MinAtar_experiments
+python3 agents/plot_return.py -f resultsseaquest/dqn_LABER -w 50 -s 12000 -n (number of runs) 
+```
+For Space Invaders: 
+```
+cd MinAtar_experiments
+python3 agents/plot_return.py -f resultsspaceinvaders/dqn_LABER -w 50 -s 12000 -n (number of runs) 
+```
 
 ## PyBullet
 

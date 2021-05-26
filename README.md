@@ -115,3 +115,12 @@ Once the experiments are run, one can recreate the paper's graphs using:
 cd PyBullet_experiments
 python3 experiments/plot_return.py -w (directory of the tensorboard file) (directory to store the numpy array of results)
 ```
+
+# Licenses
+
+[Dopamine](https://github.com/google/dopamine) is distributed under the Apache V2.0 License ([included here](Atari_experiments/LICENSE (DOPAMINE))).   
+[MinAtar](https://github.com/kenjyoung/MinAtar) is distributed under the GPL v3 license ([included here](MinAtar_experiments/License (MinAtar).txt)).   
+[Stable-Baselines3](https://github.com/DLR-RM/stable-baselines3) is distributed under the MIT license ([included here](LICENSE (SB3))).
+
+Unless in conflict with prior licenses, our work is distributed under the MIT license.
+

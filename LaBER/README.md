@@ -8,6 +8,3 @@ Extracting per-sample gradient norms in pytorch is not a straightforward task an
 
 When implementing GER or PER on TD3/SAC, we have two TD errors since there are two critics. Instead of maintaining one list of priorities, as often proposed in other works, we work with two lists, two independent mini-batches, and compute back-propagation independently on each critic.  
 
-
-### Bibtex
-

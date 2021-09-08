@@ -1,6 +1,6 @@
 # Large Batch Experience Replay
 
-This repo's contents allow to reproduce the experiments of the "Large Batch Experience Replay" paper, under review at NeurIPS 2021.
+This repo's contents allow to reproduce the experiments of the "Large Batch Experience Replay" paper.
 
 # Citation
 
@@ -63,27 +63,27 @@ Once the experiments are run, one can recreate the paper's graphs using:
 For Asterix: 
 ```
 cd MinAtar_experiments
-python3 agents/plot_return.py -f resultsasterix/dqn_LABER -w 50 -s 12000 -n (number of runs) 
+python3 agents/plot_return.py -f resultsasterix/dqn_LABER -w 1000 -s 200 -n (number of runs) 
 ```
 For Breakout: 
 ```
 cd MinAtar_experiments
-python3 agents/plot_return.py -f resultsbreakout/dqn_LABER -w 100 -s 30000 -n (number of runs) 
+python3 agents/plot_return.py -f resultsbreakout/dqn_LABER -w 3000 -s 200 -n (number of runs) 
 ```
 For Freeway: 
 ```
 cd MinAtar_experiments
-python3 agents/plot_return.py -f resultsfreeway/dqn_LABER -w 25 -s 300 -n (number of runs) 
+python3 agents/plot_return.py -f resultsfreeway/dqn_LABER -w 30 -s 10 -n (number of runs) 
 ```
 For Seaquest: 
 ```
 cd MinAtar_experiments
-python3 agents/plot_return.py -f resultsseaquest/dqn_LABER -w 50 -s 12000 -n (number of runs) 
+python3 agents/plot_return.py -f resultsseaquest/dqn_LABER -w 1000 -s 200 -n (number of runs) 
 ```
 For Space Invaders: 
 ```
 cd MinAtar_experiments
-python3 agents/plot_return.py -f resultsspaceinvaders/dqn_LABER -w 50 -s 12000 -n (number of runs) 
+python3 agents/plot_return.py -f resultsspaceinvaders/dqn_LABER -w 1000 -s 200 -n (number of runs) 
 ```
 
 ## Atari

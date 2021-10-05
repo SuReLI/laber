@@ -4,7 +4,16 @@ This repo's contents allow to reproduce the experiments of the "Large Batch Expe
 
 # Citation
 
-Omitted for anonymity during the review process.
+```
+@misc{lahire2021large,
+      title={Large Batch Experience Replay}, 
+      author={Thibault Lahire and Matthieu Geist and Emmanuel Rachelson},
+      year={2021},
+      eprint={2110.01528},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
 
 # Repository structure
 
